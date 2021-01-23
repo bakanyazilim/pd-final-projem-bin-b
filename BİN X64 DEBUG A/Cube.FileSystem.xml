@@ -1,0 +1,3044 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cube.FileSystem</name>
+    </assembly>
+    <members>
+        <member name="T:Cube.FileSystem.ExtensionFilter">
+            
+             ExtensionFilter
+            
+             <summary>
+             Provides functionality to create a string value that is used
+             as a filter of either the OpenFileDialog or SaveFileDialog.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.ExtensionFilter.#ctor(System.String,System.String[])">
+            
+             ExtensionFilter
+            
+             <summary>
+             Initializes a new instance of the ExtensionFilter class
+             with the specified parameters
+             </summary>
+            
+             <param name="description">Description for the filter.</param>
+             <param name="extensions">
+             List of target extensions (e.g., ".txt").
+             </param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.ExtensionFilter.#ctor(System.String,System.Boolean,System.String[])">
+            
+             ExtensionFilter
+            
+             <summary>
+             Initializes a new instance of the ExtensionFilter class
+             with the specified parameters
+             </summary>
+            
+             <param name="text">Description for the filter.</param>
+             <param name="ignoreCase">Ignores case or not.</param>
+             <param name="targets">
+             List of target extensions (e.g., ".txt").
+             </param>
+            
+        </member>
+        <member name="P:Cube.FileSystem.ExtensionFilter.Text">
+            
+             Text
+            
+             <summary>
+             Gets a description for the filter.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.ExtensionFilter.Targets">
+            
+             Targets
+            
+             <summary>
+             Gets a list of target extensions.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.ExtensionFilter.IgnoreCase">
+            
+             IgnoreCase
+            
+             <summary>
+             Gets a value indicating whether letter cases of the specified
+             extensions are ignored.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.ExtensionFilter.ToString">
+            
+             ToString
+            
+             <summary>
+             Converts to a string representing the filter.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.ExtensionFilter.Format(System.String)">
+            
+             Format
+            
+             <summary>
+             Converts an extension to a filter string according to the user
+             settings.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.ExtensionFilterConverter">
+            
+             ExtensionFilterConverter
+            
+             <summary>
+             Provides functionality to convert the ExtensionFilter objects
+             to system required arguments.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.ExtensionFilterConverter.GetFilter(System.Collections.Generic.IEnumerable{Cube.FileSystem.ExtensionFilter})">
+            
+             GetFilter
+            
+             <summary>
+             Gets a string value that represents the filter of either the
+             OpenFileDialog or SaveFileDialog.
+             </summary>
+            
+             <param name="src">DisplayFilter collection.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.ExtensionFilterConverter.GetFilterIndex(System.Collections.Generic.IEnumerable{Cube.FileSystem.ExtensionFilter},System.String)">
+            
+             GetFilterIndex
+            
+             <summary>
+             Gets the index of the first occurrence of the specified path
+             in the current DisplayFilter collection.
+             </summary>
+            
+             <param name="src">DisplayFilter collection.</param>
+             <param name="path">File path.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.ExtensionFilterConverter.GetFilterIndex(System.Collections.Generic.IEnumerable{Cube.FileSystem.ExtensionFilter},System.String,Cube.FileSystem.IO)">
+            
+             GetFilterIndex
+            
+             <summary>
+             Gets the index of the first occurrence of the specified path
+             in the current DisplayFilter collection.
+             </summary>
+            
+             <param name="src">DisplayFilter collection.</param>
+             <param name="path">File path.</param>
+             <param name="io">I/O handler.</param>
+            
+        </member>
+        <member name="T:Cube.FileSystem.AfsController">
+            
+             AfsController
+            
+             <summary>
+             Provides functionality to refresh properties of a EntityControllable
+             object by using the AlphaFS module.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsController.Refresh(Cube.FileSystem.EntityControllable)">
+            
+             Refresh
+            
+             <summary>
+             Refreshes the specified object.
+             </summary>
+            
+             <param name="src">Object to be refreshed.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsController.CreateCore(System.String)">
+            
+             CreateCore
+            
+             <summary>
+             Creates a new instance of the FileSystemInfo inherited class.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsController.TryCast(Alphaleonis.Win32.Filesystem.FileSystemInfo)">
+            
+             TryCast
+            
+             <summary>
+             Tries to cast to the FileInfo object.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.AfsIO">
+            
+             AfsIO
+            
+             <summary>
+             Provides functionality to do something to a file or directory by
+             using the AlphaFS module.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.GetControllerCore">
+            
+             GetControllerCore
+            
+             <summary>
+             Gets the Controller object.
+             </summary>
+            
+             <returns>Controller object.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.GetFilesCore(System.String,System.String,System.IO.SearchOption)">
+            
+             GetFilesCore
+            
+             <summary>
+             Returns the names of files (including their paths) that
+             match the specified search pattern in the specified directory,
+             using a value to determine whether to search subdirectories.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.GetDirectoriesCore(System.String,System.String,System.IO.SearchOption)">
+            
+             GetDirectoriesCore
+            
+             <summary>
+             Returns the names of the subdirectories (including their paths)
+             that match the specified search pattern in the specified
+             directory, and optionally searches subdirectories.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.CombineCore(System.String[])">
+            
+             CombineCore
+            
+             <summary>
+             Combiles the specified paths.
+             </summary>
+            
+             <param name="paths">Collection of paths.</param>
+            
+             <returns>Combined path.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.SetAttributesCore(System.String,System.IO.FileAttributes)">
+            
+             SetAttributesCore
+            
+             <summary>
+             Sets the specified attributes to the specified file or directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="attr">Attributes to set.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.SetCreationTimeCore(System.String,System.DateTime)">
+            
+             SetCreationTimeCore
+            
+             <summary>
+             Sets the specified creation time to the specified file or
+             directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="time">Creation time.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.SetLastWriteTimeCore(System.String,System.DateTime)">
+            
+             SetLastWriteTimeCore
+            
+             <summary>
+             Sets the specified last updated time to the specified file or
+             directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="time">Last updated time.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.SetLastAccessTimeCore(System.String,System.DateTime)">
+            
+             SetLastAccessTimeCore
+            
+             <summary>
+             Sets the specified last accessed time to the specified file or
+             directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="time">Last accessed time.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.DeleteCore(System.String)">
+            
+             DeleteCore
+            
+             <summary>
+             Deletes the specified file or directory.
+             </summary>
+            
+             <param name="path">Path to delete.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.CreateCore(System.String)">
+            
+             CreateCore
+            
+             <summary>
+             Creates or opens the specified file and gets the stream.
+             </summary>
+            
+             <param name="path">Path to create or open file.</param>
+            
+             <returns>FileStream object to write.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.OpenReadCore(System.String)">
+            
+             OpenReadCore
+            
+             <summary>
+             Opens the specified file as read-only.
+             </summary>
+            
+             <param name="path">File path.</param>
+            
+             <returns>Read-only stream.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.OpenWriteCore(System.String)">
+            
+             OpenWriteCore
+            
+             <summary>
+             Creates or opens the specified file and gets the stream.
+             </summary>
+            
+             <param name="path">Path to create or open file.</param>
+            
+             <returns>FileStream object to write.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.CreateDirectoryCore(System.String)">
+            
+             CreateDirectoryCore
+            
+             <summary>
+             Creates a directory.
+             </summary>
+            
+             <param name="path">Path to create.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.MoveCore(System.String,System.String)">
+            
+             MoveCore
+            
+             <summary>
+             Moves the specified file.
+             </summary>
+            
+             <param name="src">Source path.</param>
+             <param name="dest">Destination path.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.AfsIO.CopyCore(System.String,System.String,System.Boolean)">
+            
+             CopyCore
+            
+             <summary>
+             Copies the specified file.
+             </summary>
+            
+             <param name="src">Source path.</param>
+             <param name="dest">Destination path.</param>
+             <param name="overwrite">Overwrite or not.</param>
+            
+        </member>
+        <member name="T:Cube.FileSystem.Entity">
+            
+             Entity
+            
+             <summary>
+             Represents the file or directory information.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Entity.#ctor(System.String)">
+            
+             Entity
+            
+             <summary>
+             Creates a new instance of the Entity class with the
+             specified path of file or directory.
+             </summary>
+            
+             <param name="src">Path of file or directory.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Entity.#ctor(Cube.FileSystem.Entity)">
+            
+             Information
+            
+             <summary>
+             Creates a new instance of the Information class with the
+             specified object.
+             </summary>
+            
+             <param name="src">Copied information.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Entity.#ctor(System.String,Cube.FileSystem.EntityController,System.Object[])">
+            
+             Information
+            
+             <summary>
+             Creates a new instance of the Information class with the
+             specified arguments.
+             </summary>
+            
+             <param name="src">Path of the source file.</param>
+             <param name="controller">Refresher object.</param>
+             <param name="options">Optional parameters.</param>
+            
+             <remarks>
+             options for the Controller inherited classes.
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.Source">
+            
+             Source
+            
+             <summary>
+             Gets the original path.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.Exists">
+            
+             Exists
+            
+             <summary>
+             Gets the value indicating whether the Source exists.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.IsDirectory">
+            
+             IsDirectory
+            
+             <summary>
+             Gets a value indicating whether the provided path is a directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.Name">
+            
+             Name
+            
+             <summary>
+             Gets the filename.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.BaseName">
+            
+             BaseName
+            
+             <summary>
+             Gets the filename without extension.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.Extension">
+            
+             Extension
+            
+             <summary>
+             Gets the extension part of the filename.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.FullName">
+            
+             FullName
+            
+             <summary>
+             Gets the full path.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.DirectoryName">
+            
+             DirectoryName
+            
+             <summary>
+             Gets the directory name.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.Length">
+            
+             Length
+            
+             <summary>
+             Gets the file-size.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.Attributes">
+            
+             Attributes
+            
+             <summary>
+             Gets the attributes of the file or directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.CreationTime">
+            
+             CreationTime
+            
+             <summary>
+             Gets the creation time of the file or directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.LastWriteTime">
+            
+             LastWriteTime
+            
+             <summary>
+             Gets the last written time of the file or directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.LastAccessTime">
+            
+             LastAccessTime
+            
+             <summary>
+             Gets the last accessed time of the file or directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.Controllable">
+            
+             Controllable
+            
+             <summary>
+             Gets the inner object.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Entity.Controller">
+            
+             Controller
+            
+             <summary>
+             Gets the controller object.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Entity.Refresh">
+            
+             Refresh
+            
+             <summary>
+             Refreshes file or directory information.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.EntityControllable">
+            
+             EntityControllable
+            
+             <summary>
+             Represents the controllable file or directory information.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.EntityControllable.#ctor(System.String)">
+            
+             EntityControllable
+            
+             <summary>
+             Initializes a new instance of the EntityControllable class
+             with the specified path.
+             </summary>
+            
+             <param name="src">Path of the file or directory.</param>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.Source">
+            
+             Source
+            
+             <summary>
+             Gets the original path.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.Exists">
+            
+             Exists
+            
+             <summary>
+             Gets or sets the value indicating whether the Source exists.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.IsDirectory">
+            
+             IsDirectory
+            
+             <summary>
+             Gets or sets the value indicating whether the Source is
+             directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.Name">
+            
+             Name
+            
+             <summary>
+             Gets or sets the filename.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.BaseName">
+            
+             BaseName
+            
+             <summary>
+             Gets or sets the filename without extension.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.Extension">
+            
+             Extension
+            
+             <summary>
+             Gets or sets the extension part of the filename.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.FullName">
+            
+             FullName
+            
+             <summary>
+             Gets or sets the full path.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.DirectoryName">
+            
+             DirectoryName
+            
+             <summary>
+             Gets or sets the directory name.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.Length">
+            
+             Length
+            
+             <summary>
+             Gets or sets the file-size.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.Attributes">
+            
+             Attributes
+            
+             <summary>
+             Gets or sets the attributes of the file or directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.CreationTime">
+            
+             CreationTime
+            
+             <summary>
+             Gets or sets the creation time of the file or directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.LastWriteTime">
+            
+             LastWriteTime
+            
+             <summary>
+             Gets or sets the last written time of the file or directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.EntityControllable.LastAccessTime">
+            
+             LastAccessTime
+            
+             <summary>
+             Gets or sets the last accessed time of the file or directory.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.EntityController">
+            
+             EntityController
+            
+             <summary>
+             Provides to create or refresh properties of an Entity object.
+             </summary>
+            
+             <remarks>
+             Entity オブジェクトのプロパティは読み取り専用であるため、
+             外部から更新する事はできません。そのため、更新の際には
+             EntityController クラス経由で更新処理を実行する必要があります。
+             </remarks>
+            
+        </member>
+        <member name="M:Cube.FileSystem.EntityController.Create(System.String,System.Object[])">
+            
+             Create
+            
+             <summary>
+             Creates a new instance of the Refreshable class with the
+             specified path.
+             </summary>
+            
+             <param name="src">Source path.</param>
+             <param name="options">Optional parameters.</param>
+            
+             <returns>Controllable object.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.EntityController.Refresh(Cube.FileSystem.EntityControllable)">
+            
+             Refresh
+            
+             <summary>
+             Refreshes the properties of the specified object.
+             </summary>
+            
+             <param name="src">Object to be refreshed.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.EntityController.CreateCore(System.String)">
+            
+             CreateCore
+            
+             <summary>
+             Creates a new instance of the FileSystemInfo class.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.EntityController.TryCast(System.IO.FileSystemInfo)">
+            
+             TryCast
+            
+             <summary>
+             Tries to cast to the FileInfo class.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.FailedEventArgs">
+            
+             FailedEventArgs
+            
+             <summary>
+             Represents the arguments of the Failed event.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.FailedEventArgs.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.Exception)">
+            
+             FailedEventArgs
+            
+             <summary>
+             Initializes a new instance of the FailedEventArgs with the
+             specified arguments.
+             </summary>
+            
+             <param name="name">Name of failed method.</param>
+             <param name="paths">Path collection.</param>
+             <param name="error">Exception object.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.FailedEventArgs.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.Exception,System.Boolean)">
+            
+             FailedEventArgs
+            
+             <summary>
+             Initializes a new instance of the FailedEventArgs with the
+             specified arguments.
+             </summary>
+            
+             <param name="name">Name of failed method.</param>
+             <param name="paths">Path collection.</param>
+             <param name="error">Exception object.</param>
+             <param name="cancel">Cancel or not.</param>
+            
+        </member>
+        <member name="P:Cube.FileSystem.FailedEventArgs.Name">
+            
+             Name
+            
+             <summary>
+             Gets the name of failed method.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.FailedEventArgs.Paths">
+            
+             Paths
+            
+             <summary>
+             Gets the path collection specified for the failed method.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.FailedEventArgs.Exception">
+            
+             Exception
+            
+             <summary>
+             Gets the Exception object.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.FailedEventHandler">
+            
+             FailedEventHandler
+            
+             <summary>
+             Represents the Failed event handler.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.IO">
+            
+             IO
+            
+             <summary>
+             Provides functionality to do something to a file or directory.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Get(System.String)">
+            
+             Get
+            
+             <summary>
+             Gets the Entity object from the specified path.
+             </summary>
+            
+             <param name="path">Target path.</param>
+            
+             <returns>Entity object.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetCore(System.String)">
+            
+             GetCore
+            
+             <summary>
+             Gets the Entity object from the specified path.
+             </summary>
+            
+             <param name="path">Target path.</param>
+            
+             <returns>Entity object.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetController">
+            
+             GetController
+            
+             <summary>
+             Gets the EntityController object.
+             </summary>
+            
+             <returns>EntityController object.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetControllerCore">
+            
+             GetControllerCore
+            
+             <summary>
+             Gets the Controller object.
+             </summary>
+            
+             <returns>Controller object.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetFiles(System.String)">
+            
+             GetFiles
+            
+             <summary>
+             Returns the names of files (including their paths).
+             </summary>
+            
+             <param name="path">
+             The relative or absolute path to the directory to search.
+             This string is not case-sensitive.
+             </param>
+            
+             <returns>
+             An array of the full names (including paths) for the files
+             in the specified directory, or an empty array if no files are
+             found.
+             </returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetFiles(System.String,System.String)">
+            
+             GetFiles
+            
+             <summary>
+             Returns the names of files (including their paths) that
+             match the specified search pattern in the specified directory.
+             </summary>
+            
+             <param name="path">
+             The relative or absolute path to the directory to search.
+             This string is not case-sensitive.
+             </param>
+            
+             <param name="pattern">
+             The search string to match against the names of subdirectories
+             in path. This parameter can contain a combination of valid
+             literal and wildcard characters, but doesn't support regular
+             expressions.
+             </param>
+            
+             <returns>
+             An array of the full names (including paths) for the files
+             in the specified directory that match the specified search
+             pattern, or an empty array if no files are found.
+             </returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetFiles(System.String,System.String,System.IO.SearchOption)">
+            
+             GetFiles
+            
+             <summary>
+             Returns the names of files (including their paths) that
+             match the specified search pattern in the specified directory,
+             using a value to determine whether to search subdirectories.
+             </summary>
+            
+             <param name="path">
+             The relative or absolute path to the directory to search.
+             This string is not case-sensitive.
+             </param>
+            
+             <param name="pattern">
+             The search string to match against the names of subdirectories
+             in path. This parameter can contain a combination of valid
+             literal and wildcard characters, but doesn't support regular
+             expressions.
+             </param>
+            
+             <param name="option">
+             One of the enumeration values that specifies whether the
+             search operation should include all subdirectories or only
+             the current directory.
+             </param>
+            
+             <returns>
+             An array of the full names (including paths) for the files
+             in the specified directory that match the specified search
+             pattern and option, or an empty array if no files are found.
+             </returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetFilesCore(System.String,System.String,System.IO.SearchOption)">
+            
+             GetFilesCore
+            
+             <summary>
+             Returns the names of files (including their paths) that
+             match the specified search pattern in the specified directory,
+             using a value to determine whether to search subdirectories.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetDirectories(System.String)">
+            
+             GetDirectories
+            
+             <summary>
+             Returns the names of the subdirectories.
+             </summary>
+            
+             <param name="path">
+             The relative or absolute path to the directory to search.
+             This string is not case-sensitive.
+             </param>
+            
+             <returns>
+             An array of the full names (including paths) for the
+             directories in the specified directory, or an empty array
+             if no directories are found.
+             </returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetDirectories(System.String,System.String)">
+            
+             GetDirectories
+            
+             <summary>
+             Returns the names of the subdirectories (including their paths)
+             that match the specified search pattern in the specified
+             directory.
+             </summary>
+            
+             <param name="path">
+             The relative or absolute path to the directory to search.
+             This string is not case-sensitive.
+             </param>
+            
+             <param name="pattern">
+             The search string to match against the names of subdirectories
+             in path. This parameter can contain a combination of valid
+             literal and wildcard characters, but doesn't support regular
+             expressions.
+             </param>
+            
+             <returns>
+             An array of the full names (including paths) for the
+             directories in the specified directory that match the specified
+             search pattern, or an empty array if no directories are found.
+             </returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetDirectories(System.String,System.String,System.IO.SearchOption)">
+            
+             GetDirectories
+            
+             <summary>
+             Returns the names of the subdirectories (including their paths)
+             that match the specified search pattern in the specified
+             directory, and optionally searches subdirectories.
+             </summary>
+            
+             <param name="path">
+             The relative or absolute path to the directory to search.
+             This string is not case-sensitive.
+             </param>
+            
+             <param name="pattern">
+             The search string to match against the names of subdirectories
+             in path. This parameter can contain a combination of valid
+             literal and wildcard characters, but doesn't support regular
+             expressions.
+             </param>
+            
+             <param name="option">
+             One of the enumeration values that specifies whether the
+             search operation should include all subdirectories or only
+             the current directory.
+             </param>
+            
+             <returns>
+             An array of the full names (including paths) for the
+             directories in the specified directory that match the specified
+             search pattern and option, or an empty array if no directories
+             are found.
+             </returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.GetDirectoriesCore(System.String,System.String,System.IO.SearchOption)">
+            
+             GetDirectoriesCore
+            
+             <summary>
+             Returns the names of the subdirectories (including their paths)
+             that match the specified search pattern in the specified
+             directory, and optionally searches subdirectories.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Combine(System.String[])">
+            
+             Combine
+            
+             <summary>
+             Combiles the specified paths.
+             </summary>
+            
+             <param name="paths">Collection of paths.</param>
+            
+             <returns>Combined path.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.CombineCore(System.String[])">
+            
+             CombineCore
+            
+             <summary>
+             Combiles the specified paths.
+             </summary>
+            
+             <param name="paths">Collection of paths.</param>
+            
+             <returns>Combined path.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.SetAttributes(System.String,System.IO.FileAttributes)">
+            
+             SetAttributes
+            
+             <summary>
+             Sets the specified attributes to the specified file or directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="attr">Attributes to set.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.SetAttributesCore(System.String,System.IO.FileAttributes)">
+            
+             SetAttributesCore
+            
+             <summary>
+             Sets the specified attributes to the specified file or directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="attr">Attributes to set.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.SetCreationTime(System.String,System.DateTime)">
+            
+             SetCreationTime
+            
+             <summary>
+             Sets the specified creation time to the specified file or
+             directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="time">Creation time.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.SetCreationTimeCore(System.String,System.DateTime)">
+            
+             SetCreationTimeCore
+            
+             <summary>
+             Sets the specified creation time to the specified file or
+             directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="time">Creation time.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.SetLastWriteTime(System.String,System.DateTime)">
+            
+             SetLastWriteTime
+            
+             <summary>
+             Sets the specified last updated time to the specified file or
+             directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="time">Last updated time.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.SetLastWriteTimeCore(System.String,System.DateTime)">
+            
+             SetLastWriteTimeCore
+            
+             <summary>
+             Sets the specified last updated time to the specified file or
+             directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="time">Last updated time.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.SetLastAccessTime(System.String,System.DateTime)">
+            
+             SetLastAccessTime
+            
+             <summary>
+             Sets the specified last accessed time to the specified file or
+             directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="time">Last accessed time.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.SetLastAccessTimeCore(System.String,System.DateTime)">
+            
+             SetLastAccessTimeCore
+            
+             <summary>
+             Sets the specified last accessed time to the specified file or
+             directory.
+             </summary>
+            
+             <param name="path">Target path.</param>
+             <param name="time">Last accessed time.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Delete(System.String)">
+            
+             Delete
+            
+             <summary>
+             Deletes the specified file or directory.
+             </summary>
+            
+             <param name="path">Path to delete.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.TryDelete(System.String)">
+            
+             TryDelete
+            
+             <summary>
+             Tries to delete the specified file or directory.
+             </summary>
+            
+             <param name="path">Path to delete.</param>
+            
+             <returns>true for success.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.DeleteCore(System.String)">
+            
+             DeleteCore
+            
+             <summary>
+             Deletes the specified file or directory.
+             </summary>
+            
+             <param name="path">Path to delete.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.CreateDirectory(System.String)">
+            
+             CreateDirectory
+            
+             <summary>
+             Creates a directory.
+             </summary>
+            
+             <param name="path">Path to create.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.CreateDirectoryCore(System.String)">
+            
+             CreateDirectoryCore
+            
+             <summary>
+             Creates a directory.
+             </summary>
+            
+             <param name="path">Path to create.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Create(System.String)">
+            
+             Create
+            
+             <summary>
+             Creates or opens the specified file and gets the stream.
+             </summary>
+            
+             <param name="path">Path to create or open file.</param>
+            
+             <returns>FileStream object to write.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.CreateCore(System.String)">
+            
+             CreateCore
+            
+             <summary>
+             Creates or opens the specified file and gets the stream.
+             </summary>
+            
+             <param name="path">Path to create or open file.</param>
+            
+             <returns>FileStream object to write.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.OpenRead(System.String)">
+            
+             OpenRead
+            
+             <summary>
+             Opens the specified file as read-only.
+             </summary>
+            
+             <param name="path">File path.</param>
+            
+             <returns>Read-only stream.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.OpenReadCore(System.String)">
+            
+             OpenReadCore
+            
+             <summary>
+             Opens the specified file as read-only.
+             </summary>
+            
+             <param name="path">File path.</param>
+            
+             <returns>Read-only stream.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.OpenWrite(System.String)">
+            
+             OpenWrite
+            
+             <summary>
+             Creates or opens the specified file and gets the stream.
+             </summary>
+            
+             <param name="path">Path to create or open file.</param>
+            
+             <returns>FileStream object to write.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.OpenWriteCore(System.String)">
+            
+             OpenWriteCore
+            
+             <summary>
+             Creates or opens the specified file and gets the stream.
+             </summary>
+            
+             <param name="path">Path to create or open file.</param>
+            
+             <returns>FileStream object to write.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Move(System.String,System.String)">
+            
+             Move
+            
+             <summary>
+             Moves the specified file.
+             </summary>
+            
+             <param name="src">Source path.</param>
+             <param name="dest">Destination path.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Move(System.String,System.String,System.Boolean)">
+            
+             Move
+            
+             <summary>
+             Moves the specified file.
+             </summary>
+            
+             <param name="src">Source path.</param>
+             <param name="dest">Destination path.</param>
+             <param name="overwrite">Overwrite or not.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.MoveCore(System.String,System.String)">
+            
+             MoveCore
+            
+             <summary>
+             Moves the specified file.
+             </summary>
+            
+             <param name="src">Source path.</param>
+             <param name="dest">Destination path.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Copy(System.String,System.String)">
+            
+             Copy
+            
+             <summary>
+             Copies the specified file.
+             </summary>
+            
+             <param name="src">Source path.</param>
+             <param name="dest">Destination path.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Copy(System.String,System.String,System.Boolean)">
+            
+             Copy
+            
+             <summary>
+             Copies the specified file.
+             </summary>
+            
+             <param name="src">Source path.</param>
+             <param name="dest">Destination path.</param>
+             <param name="overwrite">Overwrite or not.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.CopyCore(System.String,System.String,System.Boolean)">
+            
+             CopyCore
+            
+             <summary>
+             Copies the specified file.
+             </summary>
+            
+             <param name="src">Source path.</param>
+             <param name="dest">Destination path.</param>
+             <param name="overwrite">Overwrite or not.</param>
+            
+        </member>
+        <member name="E:Cube.FileSystem.IO.Failed">
+            
+             Failed
+            
+             <summary>
+             Occurs when any operations are failed.
+             </summary>
+            
+             <remarks>
+             Key には失敗したメソッド名、Value には失敗した時に送出された例外
+             オブジェクトが設定されます。
+             </remarks>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.OnFailed(Cube.FileSystem.FailedEventArgs)">
+            
+             OnFailed
+            
+             <summary>
+             Raises the Failed event.
+             </summary>
+            
+             <remarks>
+             Failed イベントにハンドラが設定されていない場合、
+             例外をそのまま送出します。
+             </remarks>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.CreateDirectory(System.String,Cube.FileSystem.Entity)">
+            
+             CreateDirectory
+            
+             <summary>
+             Creates a directory and sets the attributes.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.CreateParentDirectory(Cube.FileSystem.Entity)">
+            
+             CreateParentDirectory
+            
+             <summary>
+             Creates the parent directory.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.CopyDirectory(Cube.FileSystem.Entity,Cube.FileSystem.Entity,System.Boolean)">
+            
+             CopyDirectory
+            
+             <summary>
+             Copies the specified directory and files.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.CopyFile(Cube.FileSystem.Entity,Cube.FileSystem.Entity,System.Boolean)">
+            
+             CopyFile
+            
+             <summary>
+             Copies the file.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.MoveDirectory(Cube.FileSystem.Entity,Cube.FileSystem.Entity,System.Boolean)">
+            
+             MoveDirectory
+            
+             <summary>
+             Moves the directory.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.MoveFile(Cube.FileSystem.Entity,Cube.FileSystem.Entity,System.Boolean)">
+            
+             MoveFile
+            
+             <summary>
+             Moves the file.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.MoveFile(Cube.FileSystem.Entity,Cube.FileSystem.Entity)">
+            
+             MoveFile
+            
+             <summary>
+             Moves the file.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Action(System.String,System.Action,System.String[])">
+            
+             Action
+            
+             <summary>
+             Invokes the action.
+             </summary>
+            
+             <remarks>
+             操作に失敗した場合、イベントハンドラで Cancel が設定されるまで
+             実行し続けます。
+             </remarks>
+            
+        </member>
+        <member name="M:Cube.FileSystem.IO.Func``1(System.String,System.Func{``0},System.String[])">
+            
+             Func
+            
+             <summary>
+             Invokes the function.
+             </summary>
+            
+             <remarks>
+             操作に失敗した場合、イベントハンドラで Cancel が設定されるまで
+             実行し続けます。
+             </remarks>
+            
+        </member>
+        <member name="T:Cube.FileSystem.IShellLink">
+            
+             IShellLink
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb774950.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.Shell32.SHFILEINFO">
+            
+             SHFILEINFO
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb759792.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.Shell32.NativeMethods">
+            
+             Shell32.NativeMethods
+            
+             <summary>
+             Provides native methods defined in the shell32.dll.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shell32.NativeMethods.SHGetFileInfo(System.String,System.UInt32,Cube.FileSystem.Shell32.SHFILEINFO@,System.UInt32,System.UInt32)">
+            
+             SHGetFileInfo
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb762179.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.PathFilter">
+            
+             PathFilter
+            
+             <summary>
+             Provides functionality to escape the path string.
+             </summary>
+            
+             <remarks>
+             Windows で使用不可能な文字のエスケープ処理を行います。
+             </remarks>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.#ctor(System.String)">
+            
+             PathFilter
+            
+             <summary>
+             Initializes a new instance with the specified string.
+             </summary>
+            
+             <param name="src">Source string.</param>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.Source">
+            
+             Source
+            
+             <summary>
+             Gets the original path.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.Value">
+            
+             Value
+            
+             <summary>
+             Gets the escaped path.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.Inner">
+            
+             Inner
+            
+             <summary>
+             Gets the inner object to escape.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.EscapeChar">
+            
+             EscapeChar
+            
+             <summary>
+             Gets the character used to replace invalid characters.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.AllowDriveLetter">
+            
+             AllowDriveLetter
+            
+             <summary>
+             Gets or sets a value indicating whether the drive letter is
+             allowed.
+             </summary>
+            
+             <remarks>
+             false に設定した場合、ドライブ文字に続く ":"（コロン）も
+             エスケープ処理の対象となります。
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.AllowCurrentDirectory">
+            
+             AllowCurrentDirectory
+            
+             <summary>
+             Gets or sets a value indicating whether the letter
+             "." (single-dot), which indicates the current directory, is
+             allowed.
+             </summary>
+            
+             <remarks>
+             false に設定した場合、"." 部分のディレクトリを取り除きます。
+             例えば、"foo\.\bar" は "foo\bar" となります。
+             </remarks>
+            
+             <see cref="P:Cube.FileSystem.PathFilter.AllowInactivation"/>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.AllowParentDirectory">
+            
+             AllowParentDirectory
+            
+             <summary>
+             Gets or sets a value indicating whether the letter
+             ".." (double-dot), which indicates the parent directory, is
+             allowed.
+             </summary>
+            
+             <remarks>
+             false に設定した場合、".." 部分のディレクトリを取り除きます。
+             例えば、"foo\..\bar" は "foo\bar" となります。
+             </remarks>
+            
+             <see cref="P:Cube.FileSystem.PathFilter.AllowInactivation"/>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.AllowInactivation">
+            
+             AllowInactivation
+            
+             <summary>
+             Gets or sets a value indicating whether the letter "\\?\",
+             which indicates the service inactivation, is allowed.
+             </summary>
+            
+             <remarks>
+             サービス機能の不活性化では "." および ".." は禁止されるため、
+             true 設定時には AllowCurrentDirectory, AllowParentDirectory の
+             設定に関わらず、これらの文字列は除去されます。また、実装上の
+             都合で、true 設定時には AllowUnc の設定も無視されます。
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.AllowUnc">
+            
+             AllowUnc
+            
+             <summary>
+             Gets or sets a value indicating whether the letter "\\",
+             which indicates the UNC path, is allowed.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.SeparatorChar">
+            
+             SeparatorChar
+            
+             <summary>
+             Gets the character that is used as the path separator.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.SeparatorChars">
+            
+             SeparatorChars
+            
+             <summary>
+             Gets the collection that may be used as the path separator.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.CurrentDirectorySymbol">
+            
+             CurrentDirectorySymbol
+            
+             <summary>
+             Gets the value that indicates the current directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.ParentDirectorySymbol">
+            
+             ParentDirectorySymbol
+            
+             <summary>
+             Gets the value that indicates the parent directory.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.UncSymbol">
+            
+             UncSymbol
+            
+             <summary>
+             Gets the value that indicates the UNC path.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.InactivationSymbol">
+            
+             InactivationSymbol
+            
+             <summary>
+             Gets the value that indicates the service inactivation.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.InvalidChars">
+            
+             InvalidChars
+            
+             <summary>
+             Gets the collection of characters that cannot be used as part
+             of a path.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.ReservedNames">
+            
+             ReservedNames
+            
+             <summary>
+             Gets the collection of names that is reserved by Windows.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.Match(System.String)">
+            
+             Match
+            
+             <summary>
+             Gets a value indicating whether the specified name is part of
+             the provided path.
+             </summary>
+            
+             <param name="name">File or directory name.</param>
+            
+             <returns>true if contained.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.Match(System.String,System.Boolean)">
+            
+             Match
+            
+             <summary>
+             Gets a value indicating whether the specified name is part of
+             the provided path.
+             </summary>
+            
+             <param name="name">File or directory name.</param>
+             <param name="ignoreCase">Case sensitive or not.</param>
+            
+             <returns>true if contained.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.MatchAny(System.Collections.Generic.IEnumerable{System.String})">
+            
+             MatchAny
+            
+             <summary>
+             Gets a value indicating whether the whether any one of the
+             specified file or directory names is part of the provided path.
+             </summary>
+            
+             <param name="names">Collection of file or directory names.</param>
+            
+             <returns>true if contained.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.MatchAny(System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            
+             MatchAny
+            
+             <summary>
+             Gets a value indicating whether the whether any one of the
+             specified file or directory names is part of the provided path.
+             </summary>
+            
+             <param name="names">Collection of file or directory names.</param>
+             <param name="ignoreCase">Case sensitive or not.</param>
+            
+             <returns>true if contained.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.Set``1(``0@,``0)">
+            
+             Set
+            
+             <summary>
+             Set the specified value to the specified field.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.EscapeOnce">
+            
+             EscapeOnce
+            
+             <summary>
+             Invokes the escape operation.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.Escape(System.String,System.Int32)">
+            
+             Escape
+            
+             <summary>
+             Invokes the escape operation.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.Combine(Cube.FileSystem.PathFilter.PathKind,System.String[])">
+            
+             Combine
+            
+             <summary>
+             Combines the specified paths.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.IsRemove(System.String,System.Int32)">
+            
+             IsRemove
+            
+             <summary>
+             Determines whether the specified name will be removed.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.IsReserved(System.String)">
+            
+             IsReserved
+            
+             <summary>
+             Determines whether the specified name is reserved.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.GetAllowCurrentDirectory">
+            
+             GetAllowCurrentDirectory
+            
+             <summary>
+             Gets a value indicating whether the character "." (single-dot)
+             is allowed.
+             </summary>
+            
+             <remarks>
+             AllowInactivation 有効時は無効化されます。
+             </remarks>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.GetAllowParentDirectory">
+            
+             GetAllowParentDirectory
+            
+             <summary>
+             Gets a value indicating whether the character ".." (double-dot)
+             is allowed.
+             </summary>
+            
+             <remarks>
+             AllowInactivation 有効時は無効化されます。
+             </remarks>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.GetAllowUnc">
+            
+             GetAllowUnc
+            
+             <summary>
+             Gets a value indicating whether the UNC path  is allowed.
+             </summary>
+            
+             <remarks>
+             AllowInactivation 有効時は無効化されます。
+             </remarks>
+            
+        </member>
+        <member name="T:Cube.FileSystem.PathFilter.PathKind">
+            
+             PathKind
+            
+             <summary>
+             Specifies the path kind.
+             </summary>
+            
+        </member>
+        <member name="F:Cube.FileSystem.PathFilter.PathKind.Normal">
+            <summary>通常のパス</summary>
+        </member>
+        <member name="F:Cube.FileSystem.PathFilter.PathKind.Unc">
+            <summary>UNC パス</summary>
+        </member>
+        <member name="F:Cube.FileSystem.PathFilter.PathKind.Inactivation">
+            <summary>サービス機能の不活性化されたパス</summary>
+        </member>
+        <member name="T:Cube.FileSystem.PathFilter.EscapedObject">
+            
+             EscapedObject
+            
+             <summary>
+             Represents the escaped object.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.PathFilter.EscapedObject.#ctor(Cube.FileSystem.PathFilter.PathKind,System.String[],System.String)">
+            
+             EscapedObject
+            
+             <summary>
+             Initializes a new instance of the EscapedObject with the
+             specified arguments.
+             </summary>
+            
+             <param name="k">Path kind.</param>
+             <param name="v">Collection of escaped names.</param>
+             <param name="s">Escaped path.</param>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.EscapedObject.Kind">
+            
+             Kind
+            
+             <summary>
+             Gets the path kind.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.EscapedObject.Parts">
+            
+             Parts
+            
+             <summary>
+             Gets the collection of escaped file or directory names.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.PathFilter.EscapedObject.Value">
+            
+             Value
+            
+             <summary>
+             Gets the escaped path.
+             </summary>
+            
+             <remarks>
+             最終結果は、Parts プロパティを単純に連結した結果と
+             Kind に応じた接頭辞を結合したものになります。
+             </remarks>
+            
+        </member>
+        <member name="T:Cube.FileSystem.SettingFolder`1">
+            
+             SettingFolder(T)
+            
+             <summary>
+             Provides functionality to load and save user settings.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.#ctor(System.Reflection.Assembly,Cube.DataContract.Format)">
+            
+             SettingFolder(T)
+            
+             <summary>
+             Initializes a new instance of the SettingsFolder class with
+             the specified arguments.
+             </summary>
+            
+             <param name="assembly">Assembly information.</param>
+             <param name="format">Serialization format.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.#ctor(System.Reflection.Assembly,Cube.DataContract.Format,Cube.FileSystem.IO)">
+            
+             SettingFolder(T)
+            
+             <summary>
+             Initializes a new instance of the SettingsFolder class with
+             the specified arguments.
+             </summary>
+            
+             <param name="assembly">Assembly information.</param>
+             <param name="format">Serialization format.</param>
+             <param name="io">I/O handler.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.#ctor(System.Reflection.Assembly,Cube.DataContract.Format,System.String)">
+            
+             SettingFolder(T)
+            
+             <summary>
+             Initializes a new instance of the SettingsFolder class with
+             the specified arguments.
+             </summary>
+            
+             <param name="assembly">Assembly information.</param>
+             <param name="format">Serialization format.</param>
+             <param name="location">Saved data location.</param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.#ctor(System.Reflection.Assembly,Cube.DataContract.Format,System.String,Cube.FileSystem.IO)">
+            
+             SettingFolder(T)
+            
+             <summary>
+             Initializes a new instance of the SettingsFolder class with
+             the specified arguments.
+             </summary>
+            
+             <param name="assembly">Assembly information.</param>
+             <param name="format">Serialization format.</param>
+             <param name="location">Saved data location.</param>
+             <param name="io">I/O handler.</param>
+            
+        </member>
+        <member name="P:Cube.FileSystem.SettingFolder`1.Value">
+            
+             Value
+            
+             <summary>
+             Gets a value that represents user settings.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.SettingFolder`1.Assembly">
+            
+             Assembly
+            
+             <summary>
+             Gets the assembly information.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.SettingFolder`1.Version">
+            
+             Version
+            
+             <summary>
+             Gets the software version.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.SettingFolder`1.Format">
+            
+             Format
+            
+             <summary>
+             Gets or sets the serialization format.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.SettingFolder`1.Location">
+            
+             Location
+            
+             <summary>
+             Gets or sets the location that the serialized data is saved in.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.SettingFolder`1.IO">
+            
+             IO
+            
+             <summary>
+             Gets the I/O handler.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.SettingFolder`1.AutoSave">
+            
+             AutoSave
+            
+             <summary>
+             Gets or sets the value indicating whether saving automatically
+             when user settings are changed.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.SettingFolder`1.AutoSaveDelay">
+            
+             AutoSaveDelay
+            
+             <summary>
+             Gets or sets the delay between detecting changed in user
+             settings and saving them.
+             </summary>
+            
+             <remarks>
+             AutoSave モードの場合、短時間に大量の保存処理が実行される
+             可能性があります。SettingsFolder では、直前のプロパティの
+             変更から一定時間保存を保留する事で、これらの問題を回避します。
+             </remarks>
+            
+        </member>
+        <member name="E:Cube.FileSystem.SettingFolder`1.Loaded">
+            
+             Loaded
+            
+             <summary>
+             Occurs when user settings is loaded from the provided location.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.OnLoaded(Cube.ValueChangedEventArgs{`0})">
+            
+             OnLoaded
+            
+             <summary>
+             Raises the Loaded event.
+             </summary>
+            
+        </member>
+        <member name="E:Cube.FileSystem.SettingFolder`1.Saved">
+            
+             Saved
+            
+             <summary>
+             Occurs when user settings is saved to the provided location.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.OnSaved(Cube.KeyValueEventArgs{Cube.DataContract.Format,System.String})">
+            
+             OnSaved
+            
+             <summary>
+             Raises the Saved event.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.Load">
+            
+             Load
+            
+             <summary>
+             Loads user settings.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.TryLoad">
+            
+             TryLoad
+            
+             <summary>
+             Tries to load user settings.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.Save">
+            
+             Save
+            
+             <summary>
+             Saves user settings.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.Dispose(System.Boolean)">
+            
+             Dispose
+            
+             <summary>
+             Releases the unmanaged resources used by the SettingsFolder
+             and optionally releases the managed resources.
+             </summary>
+            
+             <param name="disposing">
+             true to release both managed and unmanaged resources;
+             false to release only unmanaged resources.
+             </param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.GetLocation(System.Reflection.Assembly,Cube.DataContract.Format,Cube.FileSystem.IO)">
+            
+             GetLocation
+            
+             <summary>
+             Gets the location of serialization data.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.LoadCore">
+            
+             LoadCore
+            
+             <summary>
+             Loads user settings.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.SettingFolder`1.WhenChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            
+             WhenChanged
+            
+             <summary>
+             Occurs when the PropertyChanged event of the Value property
+             is fired.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.Shortcut">
+            
+             Shortcut
+            
+             <summary>
+             Provides functionality to get, create, or delete a shortcut.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.#ctor">
+            
+             Shortcut
+            
+             <summary>
+             Initializes a new instance of the Shortcut class.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.#ctor(Cube.FileSystem.IO)">
+            
+             Shortcut
+            
+             <summary>
+             Initializes a new instance of the Shortcut class with the
+             specified arguments.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Shortcut.FullName">
+            
+             FullName
+            
+             <summary>
+             Gets or sets the path of the shortcut.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Shortcut.Target">
+            
+             Target
+            
+             <summary>
+             Gets or sets the target path of the shrotcut.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Shortcut.Arguments">
+            
+             Arguments
+            
+             <summary>
+             Gets or sets the arguments of the shortcut.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Shortcut.IconLocation">
+            
+             IconLocation
+            
+             <summary>
+             Gets or sets the icon location of the shortcut.
+             </summary>
+            
+             <remarks>
+             The format of IconLocation is IconFileName[,IconIndex].
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Shortcut.IconFileName">
+            
+             IconFileName
+            
+             <summary>
+             Gets the icon path of the shortcut.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Shortcut.IconIndex">
+            
+             IconIndex
+            
+             <summary>
+             Gets the icon index of the shortcut.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Shortcut.Exists">
+            
+             Exists
+            
+             <summary>
+             Gets a value indicating whether the shortcut exists.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.Resolve(System.String)">
+            
+             Resolve
+            
+             <summary>
+             Creates the Shortcut object with the specified link path.
+             </summary>
+            
+             <param name="link">Link path.</param>
+            
+             <returns>Shortcut object.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.Resolve(System.String,Cube.FileSystem.IO)">
+            
+             Resolve
+            
+             <summary>
+             Creates the Shortcut object with the specified link path.
+             </summary>
+            
+             <param name="link">Link path.</param>
+             <param name="io">I/O object.</param>
+            
+             <returns>Shortcut object.</returns>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.Create">
+            
+             Create
+            
+             <summary>
+             Creates a new shortcut with the current settings.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.Delete">
+            
+             Delete
+            
+             <summary>
+             Delete the shortcut.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.Normalize(System.String)">
+            
+             Normalize
+            
+             <summary>
+             Normalizes the link path
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.Invoke(System.Action{Cube.FileSystem.IShellLink})">
+            
+             Invoke
+            
+             <summary>
+             Invokes the specified action.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.GetTarget(Cube.FileSystem.IShellLink)">
+            
+             GetTarget
+            
+             <summary>
+             Gets the target path of the specified link.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.GetArguments(Cube.FileSystem.IShellLink)">
+            
+             GetArguments
+            
+             <summary>
+             Gets the arguments of the specified link.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.GetIconLocation(Cube.FileSystem.IShellLink)">
+            
+             GetIconLocation
+            
+             <summary>
+             Gets the icon location of the specified link.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.GetPersistFile(Cube.FileSystem.IShellLink)">
+            
+             GetPersistFile
+            
+             <summary>
+             Gets the IPersistFile object from the specified object.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Shortcut.GetBuffer">
+            
+             GetBuffer
+            
+             <summary>
+             Creates a new instance of the StringBuilder class with a
+             specific capacity.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.FileSystem.Startup">
+            
+             Startup
+            
+             <summary>
+             Provides functionality to register and delete startup settings.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Startup.#ctor(System.String)">
+            
+             Startup
+            
+             <summary>
+             Initializes a new instance of the Startup class with the
+             specified name.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Startup.Name">
+            
+             Name
+            
+             <summary>
+             Gets the name registered in startup programs.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Startup.Command">
+            
+             Command
+            
+             <summary>
+             Gets or sets the command corresponding to the name.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.FileSystem.Startup.Enabled">
+            
+             Enabled
+            
+             <summary>
+             Gets or sets the value indicating whether the startup
+             settings is enabled.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Startup.Load">
+            
+             Load
+            
+             <summary>
+             Loads settings from the registry.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Startup.Save">
+            
+             Save
+            
+             <summary>
+             Saves settings to the registry.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Startup.Dispose(System.Boolean)">
+            
+             Dispose
+            
+             <summary>
+             Releases the unmanaged resources used by the object and
+             optionally releases the managed resources.
+             </summary>
+            
+             <param name="disposing">
+             true to release both managed and unmanaged resources;
+             false to release only unmanaged resources.
+             </param>
+            
+        </member>
+        <member name="M:Cube.FileSystem.Startup.OpenSubkey(System.Boolean)">
+            
+             OpenSubkey
+            
+             <summary>
+             Gets the RegistryKey object for startup programs.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Mixin.IO.Extension">
+            
+             Extension
+            
+             <summary>
+             Provides extended methods of the IO class.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.Load``1(Cube.FileSystem.IO,System.String,System.Func{System.IO.Stream,``0})">
+            
+             Load
+            
+             <summary>
+             Creates a new stream from the specified file and executes
+             the specified callback.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="src">Path of the source file.</param>
+             <param name="callback">User action.</param>
+            
+             <returns>Executed result.</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.LoadOrDefault``1(Cube.FileSystem.IO,System.String,System.Func{System.IO.Stream,``0},``0)">
+            
+             LoadOrDefault
+            
+             <summary>
+             Creates a new stream from the specified file and executes
+             the specified callback. When an exception occurs, returns
+             the specified object.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="src">Path of the reading file.</param>
+             <param name="callback">User action.</param>
+             <param name="error">
+             Returned object when an exception occurs.
+             </param>
+            
+             <returns>Executed result.</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.Save(Cube.FileSystem.IO,System.String,System.Action{System.IO.Stream})">
+            
+             Save
+            
+             <summary>
+             Creates a new memory stream, executes the specified callback,
+             and writes the result to the specified file.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="dest">Path of the writing file.</param>
+             <param name="callback">User action.</param>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.Exists(Cube.FileSystem.IO,System.String)">
+            
+             Exists
+            
+             <summary>
+             Determines if the specified path exists.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="src">Path to check.</param>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.Touch(Cube.FileSystem.IO,System.String)">
+            
+             Touch
+            
+             <summary>
+             Creates a new file or updates the timestamp of the specified
+             path.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="src">Path to create or update.</param>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.Touch(Cube.FileSystem.IO,System.String,System.DateTime)">
+            
+             Touch
+            
+             <summary>
+             Creates a new file or updates the timestamp of the specified
+             path.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="src">Path to create or update.</param>
+             <param name="timestamp">Timestamp to set.</param>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.Rename(Cube.FileSystem.IO,System.String,System.String)">
+            
+             Rename
+            
+             <summary>
+             Changes the filename of a path string.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="src">Source path.</param>
+             <param name="filename">Filename to rename.</param>
+            
+             <returns>Renamed path.</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.RenameExtension(Cube.FileSystem.IO,System.String,System.String)">
+            
+             RenameExtension
+            
+             <summary>
+             Changes the extension of a path string.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="src">Source path.</param>
+             <param name="extension">Extension to rename.</param>
+            
+             <returns>Renamed path.</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.GetTypeName(Cube.FileSystem.IO,Cube.FileSystem.Entity)">
+            
+             GetTypeName
+            
+             <summary>
+             Gets a value that represents kind of the specified file.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="info">File information.</param>
+            
+             <returns>Typename of the file.</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.GetTypeName(Cube.FileSystem.IO,System.String)">
+            
+             GetTypeName
+            
+             <summary>
+             Gets a value that represents type of the specified file.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="path">Path of the source file.</param>
+            
+             <returns>Typename of the file.</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.GetUniqueName(Cube.FileSystem.IO,System.String)">
+            
+             GetUniqueName
+            
+             <summary>
+             Gets a unique name with the specified path.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="path">Base path.</param>
+            
+             <returns>Unique name.</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.IO.Extension.GetUniqueName(Cube.FileSystem.IO,System.String,System.Func{System.String,System.Int32,System.String})">
+            
+             GetUniqueName
+            
+             <summary>
+             Gets a unique name with the specified path.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+             <param name="path">Path to check.</param>
+             <param name="converter">Function to convert path.</param>
+            
+             <returns>Unique name.</returns>
+            
+        </member>
+        <member name="T:Cube.Tests.FileFixture">
+            
+             FileFixture
+            
+             <summary>
+             Provides functionality to load or save files for tests.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Tests.FileFixture.#ctor">
+            
+             FileFixture
+            
+             <summary>
+             Initializes a new instance of the FileFixture class.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Tests.FileFixture.#ctor(Cube.FileSystem.IO)">
+            
+             FileFixture
+            
+             <summary>
+             Initializes a new instance of the FileFixture class with the
+             specified I/O handler.
+             </summary>
+            
+             <param name="io">I/O handler.</param>
+            
+        </member>
+        <member name="P:Cube.Tests.FileFixture.IO">
+            
+             IO
+            
+             <summary>
+             Gets the I/O handler.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Tests.FileFixture.Root">
+            
+             Root
+            
+             <summary>
+             Gets the path of the root directory that has test resources.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Tests.FileFixture.Examples">
+            
+             Examples
+            
+             <summary>
+             Gets the path of the directory that has example files for tests.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Tests.FileFixture.Results">
+            
+             Results
+            
+             <summary>
+             Gets the path of the directory that test results is saved.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Tests.FileFixture.Name">
+            
+             Name
+            
+             <summary>
+             Gets the class name.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Tests.FileFixture.Get(System.String[])">
+            
+             Get
+            
+             <summary>
+             Gets the absolute path with the specified file or directory,
+             assuming that it is in the Results directory.
+             </summary>
+            
+             <param name="paths">
+             List of file or directory names to be combined as a path.
+             </param>
+            
+             <returns>Combined path.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.FileFixture.GetSource(System.String[])">
+            
+             GetSource
+            
+             <summary>
+             Gets the absolute path with the specified file or directory,
+             assuming that it is in the Examples directory.
+             </summary>
+            
+             <param name="paths">
+             List of file or directory names to be combined as a path.
+             </param>
+            
+             <returns>Combined path.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.FileFixture.Delete(System.String)">
+            
+             Delete
+            
+             <summary>
+             Deletes all of files and directories in the specified path.
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Tests.Wait">
+            
+             Wait
+            
+             <summary>
+             Provides functionality to wait for the result of test operation.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.For(System.Func{System.Boolean})">
+            
+             For
+            
+             <summary>
+             Waits for the result of the specified predicate to be true.
+             </summary>
+            
+             <param name="predicate">Predicate object.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.For(System.Func{System.Boolean},System.TimeSpan)">
+            
+             For
+            
+             <summary>
+             Waits for the result of the specified predicate to be true.
+             </summary>
+            
+             <param name="predicate">Predicate object.</param>
+             <param name="timeout">Timeout value.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.For(System.Func{System.Boolean},System.Int64)">
+            
+             For
+            
+             <summary>
+             Waits for the result of the specified predicate to be true.
+             </summary>
+            
+             <param name="predicate">Predicate object.</param>
+             <param name="timeout">Timeout value.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.For(System.Threading.CancellationToken)">
+            
+             For
+            
+             <summary>
+             Waits until the CancellationToken is fired.
+             </summary>
+            
+             <param name="token">Cancellation token.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.For(System.Threading.CancellationToken,System.Int64)">
+            
+             For
+            
+             <summary>
+             Waits until the CancellationToken is fired.
+             </summary>
+            
+             <param name="token">Cancellation token.</param>
+             <param name="timeout">Timeout value.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.For(System.Threading.CancellationToken,System.TimeSpan)">
+            
+             For
+            
+             <summary>
+             Waits until the CancellationToken is fired.
+             </summary>
+            
+             <param name="token">Cancellation token.</param>
+             <param name="timeout">Timeout value.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.ForAsync(System.Func{System.Boolean})">
+            
+             ForAsync
+            
+             <summary>
+             Waits for the result of the specified predicate to be true
+             as an asynchronous operation.
+             </summary>
+            
+             <param name="predicate">Predicate object.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.ForAsync(System.Func{System.Boolean},System.TimeSpan)">
+            
+             ForAsync
+            
+             <summary>
+             Waits for the result of the specified predicate to be true
+             as an asynchronous operation.
+             </summary>
+            
+             <param name="predicate">Predicate object.</param>
+             <param name="timeout">Timeout value.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.ForAsync(System.Func{System.Boolean},System.Int64)">
+            
+             ForAsync
+            
+             <summary>
+             Waits for the result of the specified predicate to be true
+             as an asynchronous operation.
+             </summary>
+            
+             <param name="predicate">Predicate object.</param>
+             <param name="timeout">Timeout value.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.ForAsync(System.Threading.CancellationToken)">
+            
+             ForAsync
+            
+             <summary>
+             Waits until the CancellationToken is fired.
+             </summary>
+            
+             <param name="token">Cancellation token.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.ForAsync(System.Threading.CancellationToken,System.Int64)">
+            
+             ForAsync
+            
+             <summary>
+             Waits until the CancellationToken is fired.
+             </summary>
+            
+             <param name="token">Cancellation token.</param>
+             <param name="timeout">Timeout value.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+        <member name="M:Cube.Tests.Wait.ForAsync(System.Threading.CancellationToken,System.TimeSpan)">
+            
+             ForAsync
+            
+             <summary>
+             Waits until the CancellationToken is fired.
+             </summary>
+            
+             <param name="token">Cancellation token.</param>
+             <param name="timeout">Timeout value.</param>
+            
+             <returns>false for timeout.</returns>
+            
+        </member>
+    </members>
+</doc>

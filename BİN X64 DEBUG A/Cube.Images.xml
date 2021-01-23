@@ -1,0 +1,1028 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cube.Images</name>
+    </assembly>
+    <members>
+        <member name="T:Cube.Images.Icons.IconFactory">
+            
+             IconFactory
+            
+             <summary>
+             Icon を生成するためのクラスです。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.Icons.IconFactory.Create(Cube.Images.Icons.StockIcons,Cube.Images.Icons.IconSize)">
+            
+             Create
+            
+             <summary>
+             システムで用意されているアイコンを生成します。
+             </summary>
+            
+             <param name="si">システムアイコンの ID</param>
+             <param name="size">アイコンサイズ</param>
+            
+             <returns>アイコン</returns>
+            
+        </member>
+        <member name="M:Cube.Images.Icons.IconFactory.Create(System.IO.FileInfo,Cube.Images.Icons.IconSize)">
+            
+             Create
+            
+             <summary>
+             指定されたファイルからアイコンを生成します。
+             </summary>
+            
+             <param name="fi">ファイル情報</param>
+             <param name="size">アイコンサイズ</param>
+            
+             <returns>アイコン</returns>
+            
+        </member>
+        <member name="M:Cube.Images.Icons.IconFactory.Create(Cube.FileSystem.Entity,Cube.Images.Icons.IconSize)">
+            
+             Create
+            
+             <summary>
+             指定されたファイルからアイコンを生成します。
+             </summary>
+            
+             <param name="fi">ファイル情報</param>
+             <param name="size">アイコンサイズ</param>
+            
+             <returns>アイコン</returns>
+            
+        </member>
+        <member name="M:Cube.Images.Icons.IconFactory.Create(System.String,Cube.Images.Icons.IconSize)">
+            
+             Create
+            
+             <summary>
+             指定されたファイルからアイコンを生成します。
+             </summary>
+            
+             <param name="path">ファイルのパス</param>
+             <param name="size">アイコンサイズ</param>
+            
+             <returns>アイコン</returns>
+            
+        </member>
+        <member name="M:Cube.Images.Icons.IconFactory.Create(System.Reflection.Assembly,Cube.Images.Icons.IconSize)">
+            
+             Create
+            
+             <summary>
+             指定された Assembly オブジェクトからアイコンを生成します。
+             </summary>
+            
+             <param name="asm">アセンブリ情報</param>
+             <param name="size">アイコンサイズ</param>
+            
+             <returns>アイコン</returns>
+            
+        </member>
+        <member name="M:Cube.Images.Icons.IconFactory.GetIcon(Cube.Images.Icons.StockIcons,Cube.Images.Icons.IconSize)">
+            
+             GetIcon
+            
+             <summary>
+             システムで用意されているアイコンを取得します。
+             </summary>
+            
+             <param name="si">システムアイコンの ID</param>
+             <param name="size">アイコンサイズ</param>
+            
+             <returns>アイコン</returns>
+            
+        </member>
+        <member name="M:Cube.Images.Icons.IconFactory.GetIcon(System.IO.FileInfo,Cube.Images.Icons.IconSize)">
+            
+             GetIcon
+            
+             <summary>
+             指定されたファイルからアイコンを取得します。
+             </summary>
+            
+             <param name="fi">ファイル情報</param>
+             <param name="size">アイコンサイズ</param>
+            
+             <returns>アイコン</returns>
+            
+        </member>
+        <member name="M:Cube.Images.Icons.IconFactory.GetIcon(Cube.FileSystem.Entity,Cube.Images.Icons.IconSize)">
+            
+             GetIcon
+            
+             <summary>
+             指定されたファイルからアイコンを取得します。
+             </summary>
+            
+             <param name="fi">ファイル情報</param>
+             <param name="size">アイコンサイズ</param>
+            
+             <returns>アイコン</returns>
+            
+        </member>
+        <member name="M:Cube.Images.Icons.IconFactory.GetIcon(System.Reflection.Assembly,Cube.Images.Icons.IconSize)">
+            
+             GetIcon
+            
+             <summary>
+             Assembly オブジェクトに対応するアイコンを取得します。
+             </summary>
+            
+             <param name="asm">アセンブリ情報</param>
+             <param name="size">アイコンサイズ</param>
+            
+             <returns>アイコン</returns>
+            
+        </member>
+        <member name="T:Cube.Images.Icons.IconSize">
+            
+             IconSize
+            
+             <summary>
+             システムで用意されているアイコンの大きさを定義した列挙型です。
+             </summary>
+            
+        </member>
+        <member name="F:Cube.Images.Icons.IconSize.Large">
+            <summary>16x16 pixel</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.IconSize.Small">
+            <summary>32x32 pixel</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.IconSize.ExtraLarge">
+            <summary>48x48 pixel</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.IconSize.Jumbo">
+            <summary>256x256 pixel</summary>
+        </member>
+        <member name="T:Cube.Images.Icons.StockIcons">
+            
+             StockIcons
+            
+             <summary>
+             システムで用意されているアイコン一覧を定義した列挙型です。
+             </summary>
+            
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DocumentNotAssociated">
+            <summary>関連付けされていないファイル</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DocumentAssociated">
+            <summary>関連付けされたファイル</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Application">
+            <summary>アプリケーション</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Folder">
+            <summary>フォルダ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.FolderOpen">
+            <summary>開かれたフォルダ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Floppy525">
+            <summary>5.25 インチのフロッピー</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Floppy35">
+            <summary>3.5 インチのフロッピー</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.RemovableDrive">
+            <summary>リムーバブルドライブ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.FixedDrive">
+            <summary>ローカルドライブ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.NetworkDrive">
+            <summary>ネットワークドライブ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.NetworkDriveDisconnected">
+            <summary>未接続状態のネットワークドライブ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.CdDrive">
+            <summary>CD ドライブ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.RamDrive">
+            <summary>RAM ドライブ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.World">
+            <summary>インターネット</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Server">
+            <summary>サーバ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Printer">
+            <summary>プリンタ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Network">
+            <summary>ネットワーク</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Find">
+            <summary>検索</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Help">
+            <summary>ヘルプ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Share">
+            <summary>共有</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Link">
+            <summary>リンク</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.SlowFile">
+            <summary>低速ファイル</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Recycle">
+            <summary>空のゴミ箱</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.RecycleFull">
+            <summary>ゴミ箱</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.AudioCdMedia">
+            <summary>Audio 用 CD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Lock">
+            <summary>ロック状態</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.AutoList">
+            <summary>自動リスト</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.NetworkPrinter">
+            <summary>ネットワークプリンタ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.ServerShare">
+            <summary>共有サーバ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.FaxPrinter">
+            <summary>FAX プリンタ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.NetworkFaxPrinter">
+            <summary>ネットワーク FAX プリンタ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.PrintToFile">
+            <summary>ファイルに出力</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Stack">
+            <summary>スタック</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.SvcdMedia">
+            <summary>SVCD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.StuffedFolder">
+            <summary>フォルダ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.UnknownDrive">
+            <summary>不明なドライブ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DvdDrive">
+            <summary>DVD ドライブ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DvdMedia">
+            <summary>DVD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DvdRamMedia">
+            <summary>DVD-RAM メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DvdRwMedia">
+            <summary>DVD-RW メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DvdRMedia">
+            <summary>DVD-R メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DvdRomMedia">
+            <summary>DVD ROM メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.CdPlusMedia">
+            <summary>CD+ メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.CdRwMedia">
+            <summary>CD-RW メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.CdRMedia">
+            <summary>CD-R メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Burning">
+            <summary>メディアに保存中</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.BlankCdMedia">
+            <summary>空の CD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.CdRomMedia">
+            <summary>CD ROM メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.AudioFiles">
+            <summary>音楽ファイル</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.ImageFiles">
+            <summary>画像ファイル</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.VideoFiles">
+            <summary>動画ファイル</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.MixedFiles">
+            <summary>マルチメディアファイル</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.FolderBack">
+            <summary>戻る</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.FolderFront">
+            <summary>進む</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Shield">
+            <summary>シールドアイコン</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Warning">
+            <summary>警告</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Information">
+            <summary>情報</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Error">
+            <summary>エラー</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Key">
+            <summary>鍵</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Software">
+            <summary>ソフトウェア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Rename">
+            <summary>名前を変更</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Delete">
+            <summary>削除</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.AudioDvdMedia">
+            <summary>音楽 DVD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.MovieDvdMedia">
+            <summary>映像 DVD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.EnhancedCdMedia">
+            <summary>CD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.EnhancedDvdMedia">
+            <summary>DVD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.HdDvdMedia">
+            <summary>HD-DVD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.BluRayMedia">
+            <summary>BluRay メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.VcdMedia">
+            <summary>VCD メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DvdPlusRMedia">
+            <summary>DVD+R メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.DvdPlusRwMedia">
+            <summary>DVD+RW メディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Desktop">
+            <summary>デスクトップ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Mobile">
+            <summary>モバイル</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Users">
+            <summary>ユーザ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.SmartMedia">
+            <summary>スマートメディア</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.CompactFlash">
+            <summary>コンパクトフラッシュ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.CellPhone">
+            <summary>携帯電話</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Camera">
+            <summary>カメラ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.VideoCamera">
+            <summary>ビデオカメラ</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.AudioPlayer">
+            <summary>音楽プレーヤー</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.NetworkConnect">
+            <summary>ネットワークに接続済み</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Internet">
+            <summary>インターネット</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Zip">
+            <summary>ZIP</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.Settings">
+            <summary>設定</summary>
+        </member>
+        <member name="F:Cube.Images.Icons.StockIcons.MaxIcons">
+            <summary>最後のアイコン</summary>
+        </member>
+        <member name="T:Cube.Images.Jpeg">
+            
+             Jpeg
+            
+             <summary>
+             JPEG のフォーマットに関わる設定を補助するためのメソッドを定義した
+             クラスです。
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Images.Jpeg.Format">
+            
+             Format
+            
+             <summary>
+             JPEG を表す ImageFormat オブジェクトを取得します。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.Jpeg.Quality(System.Int64)">
+            
+             Quality
+            
+             <summary>
+             JPEG の品質を表すオブジェクトを生成します。
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.Png">
+            
+             Png
+            
+             <summary>
+             PNG のフォーマットに関わる設定を補助するためのメソッドを定義した
+             クラスです。
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Images.Png.Format">
+            
+             Format
+            
+             <summary>
+             PNG を表す ImageFormat オブジェクトを取得します。
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.Bmp">
+            
+             Bmp
+            
+             <summary>
+             BMP のフォーマットに関わる設定を補助するためのメソッドを定義した
+             クラスです。
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Images.Bmp.Format">
+            
+             Format
+            
+             <summary>
+             BMP を表す ImageFormat オブジェクトを取得します。
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.ImageResizer">
+            
+             ImageResizer
+            
+             <summary>
+             画像をリサイズするためのクラスです。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.#ctor(System.String)">
+            
+             ImageResizer
+            
+             <summary>
+             オブジェクトを初期化します。
+             </summary>
+            
+             <param name="src">リサイズ対象ファイル</param>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.#ctor(System.String,Cube.FileSystem.IO)">
+            
+             ImageResizer
+            
+             <summary>
+             オブジェクトを初期化します。
+             </summary>
+            
+             <param name="src">リサイズ対象ファイル</param>
+             <param name="io">ファイル入出力用オブジェクト</param>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.#ctor(System.IO.Stream)">
+            
+             ImageResizer
+            
+             <summary>
+             オブジェクトを初期化します。
+             </summary>
+            
+             <param name="src">
+             リサイズ対象となる画像ファイルを読み込むストリーム
+             </param>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.#ctor(System.Drawing.Image)">
+            
+             ImageResizer
+            
+             <summary>
+             オブジェクトを初期化します。
+             </summary>
+            
+             <param name="src">リサイズ対象となる画像</param>
+            
+             <remarks>
+             指定された Image オブジェクトが NULL の場合、または Image
+             オブジェクトの幅または高さが 0 の場合は例外が送出されます。
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.IO">
+            
+             IO
+            
+             <summary>
+             Gets the I/O handler.
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.Original">
+            
+             Original
+            
+             <summary>
+             オリジナルの Image オブジェクトを取得します。
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.Resized">
+            
+             Resized
+            
+             <summary>
+             リサイズ後の Image オブジェクトを取得します。
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.Width">
+            
+             Width
+            
+             <summary>
+             リサイズ後の幅を取得または設定します。
+             </summary>
+            
+             <remarks>
+             PreserveAspectRatio が true に設定されている場合、自動的に
+             Height の値も変更されます。
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.Height">
+            
+             Height
+            
+             <summary>
+             リサイズ後の高さを取得または設定します。
+             </summary>
+            
+             <remarks>
+             PreserveAspectRatio が true に設定されている場合、自動的に
+             Height の値も変更されます。
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.LongSide">
+            
+             LongSide
+            
+             <summary>
+             長辺の長さを取得または指定します。
+             </summary>
+            
+             <remarks>
+             長辺がどちらに当たるかは、Original のサイズを基に判別します。
+             また、PreserveAspectRatio が true に設定されている場合、短辺の長さも
+             自動的に変更されます。
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.ShortSide">
+            
+             ShortSide
+            
+             <summary>
+             短辺の長さを取得または指定します。
+             </summary>
+            
+             <remarks>
+             短辺がどちらに当たるかは、Original のサイズを基に判別します。
+             また、PreserveAspectRatio が true に設定されている場合、長辺の長さも
+             自動的に変更されます。
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.ResizeMode">
+            
+             ResizeMode
+            
+             <summary>
+             リサイズ方法を取得または設定します。
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.ShrinkOnly">
+            
+             ShrinkOnly
+            
+             <summary>
+             オリジナル画像の幅または高さよりリサイズ後の幅または高さが
+             大きい場合、リサイズ処理をスキップするかどうかを示す値を
+             取得または設定します。
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.PreserveAspectRatio">
+            
+             PreserveAspectRatio
+            
+             <summary>
+             オリジナル画像のアスペクト比を維持したまたリサイズするか
+             どうかを示す値を取得または設定します。
+             </summary>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.AspectRatio">
+            
+             AspectRatio
+            
+             <summary>
+             オリジナル画像のアスペクト比（縦横比）を取得します。
+             </summary>
+            
+             <remarks>
+             アスペクト比は短辺を 1 とした時の長辺の長さを表します。
+             </remarks>
+            
+        </member>
+        <member name="P:Cube.Images.ImageResizer.ColorDepth">
+            
+             ColorDepth
+            
+             <summary>
+             オリジナル画像のビット深度を取得します。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.Save(System.String)">
+            
+             Save
+            
+             <summary>
+             リサイズ後の Image オブジェクトをファイルに保存します。
+             </summary>
+            
+             <param name="path">保存パス</param>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.Save(System.IO.Stream)">
+            
+             Save
+            
+             <summary>
+             リサイズ後の Image オブジェクトをストリームに書き出します。
+             </summary>
+            
+             <param name="stream">書き込み用ストリーム</param>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.Save(System.String,System.Drawing.Imaging.ImageFormat)">
+            
+             Save
+            
+             <summary>
+             リサイズ後の Image オブジェクトをファイルに保存します。
+             </summary>
+            
+             <param name="path">保存パス</param>
+             <param name="format">保存する画像のフォーマット</param>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.Save(System.IO.Stream,System.Drawing.Imaging.ImageFormat)">
+            
+             Save
+            
+             <summary>
+             リサイズ後の Image オブジェクトをストリームに書き出します。
+             </summary>
+            
+             <param name="stream">書き出し用ストリーム</param>
+             <param name="format">保存する画像のフォーマット</param>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.Save(System.String,System.Drawing.Imaging.ImageFormat,System.Drawing.Imaging.EncoderParameters)">
+            
+             Save
+            
+             <summary>
+             リサイズ後の Image オブジェクトをファイルに保存します。
+             </summary>
+            
+             <param name="path">保存パス</param>
+             <param name="format">保存する画像のフォーマット</param>
+             <param name="parameters">付随するパラメータ</param>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.Save(System.IO.Stream,System.Drawing.Imaging.ImageFormat,System.Drawing.Imaging.EncoderParameters)">
+            
+             Save
+            
+             <summary>
+             リサイズ後の Image オブジェクトをストリームに書き出します。
+             </summary>
+            
+             <param name="stream">書き出し用ストリーム</param>
+             <param name="format">保存する画像のフォーマット</param>
+             <param name="parameters">付随するパラメータ</param>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.Dispose(System.Boolean)">
+            
+             Dispose
+            
+             <summary>
+             リソースオブジェクトを破棄します。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.Initialize">
+            
+             Initialize
+            
+             <summary>
+             初期化処理を実行します。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.Resize">
+            
+             Resize
+            
+             <summary>
+             リサイズ処理を実行します。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.SetResizeMode(System.Drawing.Graphics)">
+            
+             SetResizeMode
+            
+             <summary>
+             リサイズ方法を設定します。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.ImageResizer.DisposeImage">
+            
+             DisposeImage
+            
+             <summary>
+             リサイズ後の Image オブジェクトを破棄します。
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.ImageResizeMode">
+            
+             ImageResizeMode
+            
+             <summary>
+             リサイズ処理の方法を表す列挙型です。
+             </summary>
+            
+        </member>
+        <member name="F:Cube.Images.ImageResizeMode.Default">
+            <summary>既定の方法</summary>
+        </member>
+        <member name="F:Cube.Images.ImageResizeMode.HighQuality">
+            <summary>品質重視</summary>
+        </member>
+        <member name="F:Cube.Images.ImageResizeMode.HighSpeed">
+            <summary>速度重視</summary>
+        </member>
+        <member name="T:Cube.Images.Shell32.NativeMethods">
+            
+             Shell32
+            
+             <summary>
+             shell32.dll に定義された関数を宣言するためのクラスです。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.Shell32.NativeMethods.SHGetFileInfo(System.String,System.UInt32,Cube.Images.SHFILEINFO@,System.UInt32,System.UInt32)">
+            
+             SHGetFileInfo
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb762179.aspx
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.Shell32.NativeMethods.SHGetStockIconInfo(System.UInt32,System.UInt32,Cube.Images.SHSTOCKICONINFO@)">
+            
+             SHGetStockIconInfo
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb762205.aspx
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Images.Shell32.NativeMethods.SHGetImageList(System.UInt32,System.Guid,Cube.Images.IImageList@)">
+            
+             SHGetImageList
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb762185.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.IImageList">
+            
+             IImageList
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb761490.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.IMAGEINFO">
+            
+             IMAGEINFO
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb761393.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.IMAGELISTDRAWPARAMS">
+            
+             IMAGELISTDRAWPARAMS
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb761395.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.POINT">
+            
+             POINT
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/8kk2sy33.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.RECT">
+            
+             RECT
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/a5ch4fda.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.SHFILEINFO">
+            
+             SHFILEINFO
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb759792.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Images.SHSTOCKICONINFO">
+            
+             SHSTOCKICONINFO
+            
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/bb759805.aspx
+             </summary>
+            
+        </member>
+        <member name="T:Cube.Mixin.Drawing.Extension">
+            
+             Extension
+            
+             <summary>
+             Provides extende methods of classes in the System.Drawing namespace.
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Mixin.Drawing.Extension.IsFormat(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            
+             IsFormat
+            
+             <summary>
+             Image オブジェクトが指定されたイメージフォーマとかどうか
+             判別します。
+             </summary>
+            
+             <param name="src">Image オブジェクト</param>
+             <param name="format">イメージフォーマット</param>
+            
+             <returns>
+             指定されたイメージフォーマットに合致するかどうかを示す値
+             </returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.Drawing.Extension.IsIndexedColor(System.Drawing.Image)">
+            
+             IsIndexedColor
+            
+             <summary>
+             インデックスカラーかどうかを判別します。
+             </summary>
+            
+             <param name="src">Image オブジェクト</param>
+            
+             <returns>インデックスカラーかどうかを示す値</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.Drawing.Extension.GetColorDepth(System.Drawing.Image)">
+            
+             GetColorDepth
+            
+             <summary>
+             Image オブジェクトのビット深度を取得します。
+             </summary>
+            
+             <param name="src">Image オブジェクト</param>
+            
+             <returns>ビット深度</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.Drawing.Extension.GetImageFormat(System.Drawing.Image)">
+            
+             GetImageFormat
+            
+             <summary>
+             Image オブジェクトに対応する ImageFormat オブジェクトを
+             取得します。システムに登録されているオブジェクトと一致した
+             場合、RawFormat の代わりにそれらが返されます。
+             </summary>
+            
+             <param name="src">Image オブジェクト</param>
+            
+             <returns>ImageFormat オブジェクト</returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.Drawing.Extension.GetRgbFormat(System.Drawing.Image)">
+            
+             GetRgbFormat
+            
+             <summary>
+             Image オブジェクトを RGB カラーで表現した時の PixelFormat を
+             取得します。
+             </summary>
+            
+             <param name="src">Image オブジェクト</param>
+            
+             <returns>
+             RGB カラーで表現する場合の PixelFormat
+             </returns>
+            
+        </member>
+        <member name="M:Cube.Mixin.Drawing.Extension.GetImageFormats">
+            
+             GetImageFormats
+            
+             <summary>
+             システムに登録されている ImageFormat オブジェクト一覧を取得
+             します。
+             </summary>
+            
+        </member>
+        <member name="M:Cube.Mixin.Drawing.Extension.GetRgbFormats">
+            
+             GetRgbFormats
+            
+             <summary>
+             RGB カラーを表す PixelFormat オブジェクト一覧を取得します。
+             </summary>
+            
+        </member>
+    </members>
+</doc>
